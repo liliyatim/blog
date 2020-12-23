@@ -7,9 +7,9 @@ use Yii;
 /**
  * This is the model class for table "article_tag".
  *
- * @property int $id
- * @property int|null $article_id
- * @property int|null $tag_id
+ * @property integer $id
+ * @property integer $article_id
+ * @property integer $tag_id
  *
  * @property Tag $tag
  * @property Article $article
@@ -17,7 +17,7 @@ use Yii;
 class ArticleTag extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public static function tableName()
     {
@@ -25,7 +25,7 @@ class ArticleTag extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
@@ -37,7 +37,7 @@ class ArticleTag extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function attributeLabels()
     {
@@ -49,8 +49,6 @@ class ArticleTag extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[Tag]].
-     *
      * @return \yii\db\ActiveQuery
      */
     public function getTag()
@@ -59,8 +57,6 @@ class ArticleTag extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[Article]].
-     *
      * @return \yii\db\ActiveQuery
      */
     public function getArticle()
