@@ -2,7 +2,6 @@
 
 namespace app\modules\admin\controllers;
 
-use app\models\ImageUpload;
 use app\models\Category;
 use app\models\ImageUpload;
 use app\models\Tag;
@@ -89,7 +88,7 @@ class ArticleController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
+        
         if ($model->load(Yii::$app->request->post()) && $model->saveArticle()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
@@ -142,10 +141,10 @@ class ArticleController extends Controller
                 return $this->redirect(['view', 'id'=>$article->id]);
             }
         }
-
+        
         return $this->render('image', ['model'=>$model]);
     }
-
+    
     public function actionSetCategory($id)
     {
         $article = $this->findModel($id);
@@ -180,22 +179,10 @@ class ArticleController extends Controller
             $article->saveTags($tags);
             return $this->redirect(['view', 'id'=>$article->id]);
         }
-
+        
         return $this->render('tags', [
             'selectedTags'=>$selectedTags,
             'tags'=>$tags
         ]);
-    }
-
-    public function actionSetImage($id)
-    {
-        $model=new ImageUpload;
-        if (Yii::$app->request->isPost)
-        {
-            $article = $this->findModel($id);
-            $file=UploadedFile::getInstance($model,'image');
-            $article->saveImage($model->uploadFile($file, $article->image));
-        }
-        return $this->render('image',['model'=>$model]);
     }
 }

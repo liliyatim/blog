@@ -46,7 +46,7 @@ class Tag extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-
+    
     public function getArticles()
     {
         return $this->hasMany(Article::className(), ['id' => 'article_id'])
