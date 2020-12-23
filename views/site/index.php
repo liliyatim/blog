@@ -43,9 +43,9 @@ use yii\widgets\LinkPager;
                 <?php endforeach; ?>
 
                 <?php
-                echo LinkPager::widget([
-                    'pagination' => $pagination,
-                ]);
+                    echo LinkPager::widget([
+                        'pagination' => $pagination,
+                    ]);
                 ?>
             </div>
             <?= $this->render('/partials/sidebar', [

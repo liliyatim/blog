@@ -9,7 +9,7 @@ class SignupForm extends Model
     public $name;
     public $email;
     public $password;
-
+    
     public function rules()
     {
         return [
@@ -19,7 +19,7 @@ class SignupForm extends Model
             [['email'], 'unique', 'targetClass'=>'app\models\User', 'targetAttribute'=>'email']
         ];
     }
-
+    
     public function signup()
     {
         if($this->validate())

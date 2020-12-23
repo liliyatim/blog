@@ -1,11 +1,11 @@
 actor: Tester
-bootstrap: _bootstrap.php
 paths:
     tests: tests
     log: tests/_output
     data: tests/_data
     helpers: tests/_support
 settings:
+    bootstrap: _bootstrap.php
     memory_limit: 1024M
     colors: true
 modules:
@@ -18,10 +18,19 @@ modules:
 #    #c3_url: http://localhost:8080/index-test.php/
 #    enabled: true
 #    #remote: true
-#    #remote_config: '../codeception.yml'
+#    #remote_config: '../tests/codeception.yml'
 #    whitelist:
 #        include:
 #            - models/*
 #            - controllers/*
 #            - commands/*
 #            - mail/*
+#    blacklist:
+#        include:
+#            - assets/*
+#            - config/*
+#            - runtime/*
+#            - vendor/*
+#            - views/*
+#            - web/*
+#            - tests/*
