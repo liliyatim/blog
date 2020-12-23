@@ -2,17 +2,18 @@
 
 namespace app\models;
 
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Category;
 
 /**
- * CategorySearch represents the model behind the search form of `app\models\Category`.
+ * CategorySearch represents the model behind the search form about `app\models\Category`.
  */
 class CategorySearch extends Category
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
@@ -23,7 +24,7 @@ class CategorySearch extends Category
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function scenarios()
     {
