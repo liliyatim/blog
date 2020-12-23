@@ -65,23 +65,8 @@ class Article extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * Gets query for [[ArticleTags]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
-    public function getArticleTags()
-    {
-        return $this->hasMany(ArticleTag::className(), ['article_id' => 'id']);
-    }
-
-    /**
-     * Gets query for [[Comments]].
-     *
-     * @return \yii\db\ActiveQuery
-     */
-    public function getComments()
-    {
-        return $this->hasMany(Comment::className(), ['article_id' => 'id']);
+    public function saveImage($filename) {
+        $this->image = $filename;
+        return $this->save(false);
     }
 }
