@@ -1,12 +1,15 @@
 <div class="admin-default-index">
-    <h1><?= $this->context->action->uniqueId ?></h1>
-    <p>
-        This is the view content for action "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
-    </p>
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
+    <h1>Home Page</h1>
+    <br>
+    <br>
+    <h3>From this page you can go to other pages.<br><br><br>
+        Article Page - Creates new articles.  <br><br>
+        Comment, Categories and Tags - edit comments / manage categories /to create tags .<br><br><br>
+    </h3>
+
+    <h4>
+        Created by: Tymofiiva Lilia <br>
+    </h4>
+
 </div>
+
