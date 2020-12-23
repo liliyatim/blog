@@ -77,7 +77,7 @@ class Comment extends \yii\db\ActiveRecord
     {
         return Yii::$app->formatter->asDate($this->date);
     }
-
+    
     public function isAllowed()
     {
         return $this->status;

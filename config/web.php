@@ -20,7 +20,7 @@ $config = [
             'errorAction' => 'site/error',
         ],
         'db' => require(__DIR__ . '/db.php'),
-
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,

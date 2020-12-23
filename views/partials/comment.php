@@ -21,7 +21,7 @@
     <?php endforeach;?>
 
 <?php endif;?>
-    <!-- end bottom comment-->
+<!-- end bottom comment-->
 
 <?php if(!Yii::$app->user->isGuest):?>
     <div class="leave-comment"><!--leave comment-->

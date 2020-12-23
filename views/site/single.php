@@ -40,11 +40,11 @@ use yii\helpers\Url;
                     </div>
                 </article>
 
-                <?= $this->render('/partials/comment', [
-                    'article'=>$article,
-                    'comments'=>$comments,
-                    'commentForm'=>$commentForm
-                ])?>
+             <?= $this->render('/partials/comment', [
+                 'article'=>$article,
+                 'comments'=>$comments,
+                 'commentForm'=>$commentForm
+             ])?>
             </div>
             <?= $this->render('/partials/sidebar', [
                 'popular'=>$popular,

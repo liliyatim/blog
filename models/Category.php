@@ -51,12 +51,12 @@ class Category extends \yii\db\ActiveRecord
     {
         return $this->getArticles()->count();
     }
-
+    
     public static function getAll()
     {
         return Category::find()->all();
     }
-
+    
     public static function getArticlesByCategory($id)
     {
         // build a DB query to get all articles
@@ -75,7 +75,7 @@ class Category extends \yii\db\ActiveRecord
 
         $data['articles'] = $articles;
         $data['pagination'] = $pagination;
-
+        
         return $data;
     }
 }
