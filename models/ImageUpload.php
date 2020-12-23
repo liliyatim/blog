@@ -1,13 +1,10 @@
 <?php
-
 namespace app\models;
-
 use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
-class ImageUpload extends Model{
-
+  class ImageUpload extends Model{
     public $image;
 
     public function rules()
@@ -21,14 +18,17 @@ class ImageUpload extends Model{
 
     public function uploadFile(UploadedFile $file, $currentImage)
     {
+
         $this->image = $file;
 
-        if($this->validate())
-        {
-            $this->deleteCurrentImage($currentImage);
-            return $this->saveImage();
+        if(file_exists(Yii::getAlias('@web').'uploads/'.$currentImage) && $currentImage!=NULL) {
+            unlink(Yii::getAlias('@web') . 'uploads/' . $currentImage);
         }
+        $filename = strtolower(md5(uniqid($this->image->baseName)) . '.' . $this->image->extension);
 
+        $file->saveAs(Yii::getAlias('@web').'uploads/'.$filename);
+
+        return $filename;
     }
 
     private function getFolder()

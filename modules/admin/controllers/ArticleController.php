@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\ImageUpload;
 use app\models\Category;
 use app\models\ImageUpload;
 use app\models\Tag;
@@ -184,5 +185,17 @@ class ArticleController extends Controller
             'selectedTags'=>$selectedTags,
             'tags'=>$tags
         ]);
+    }
+
+    public function actionSetImage($id)
+    {
+        $model=new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $article = $this->findModel($id);
+            $file=UploadedFile::getInstance($model,'image');
+            $article->saveImage($model->uploadFile($file, $article->image));
+        }
+        return $this->render('image',['model'=>$model]);
     }
 }

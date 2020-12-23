@@ -66,7 +66,6 @@ class Article extends \yii\db\ActiveRecord
             'category_id' => 'Category ID',
         ];
     }
-
     public function saveArticle()
     {
         $this->user_id = Yii::$app->user->id;
