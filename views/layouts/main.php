@@ -38,7 +38,7 @@ PublicAsset::register($this);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="/public/images/logo.jpg" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="/public/images/logo_header.png" alt=""></a>
             </div>
 
 
@@ -58,7 +58,7 @@ PublicAsset::register($this);
                             <?= Html::beginForm(['/auth/logout'], 'post')
                             . Html::submitButton(
                                 'Logout (' . Yii::$app->user->identity->name . ')',
-                                ['class' => 'btn btn-link logout', 'style'=>"padding-top:10px;"]
+                                ['class' => 'btn btn-link logout', 'style'=>"padding-top:20px;"]
                             )
                             . Html::endForm() ?>
                         <?php endif;?>
@@ -81,7 +81,7 @@ PublicAsset::register($this);
         <div class="row">
             <div class="col-sm text-center">
                 <aside class="footer-widget">
-                    <div class="about-img"><img src="/public/images/logo2.png" alt=""></div>
+                    <div class="about-img"><img src="/public/images/logo.png" alt="Tymofiiva"></div>
                     <div class="about-content">Animal Blog created on Yii2.<br>
 
                     </div>
